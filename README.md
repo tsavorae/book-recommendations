@@ -13,3 +13,19 @@ Selected subset:
 - 5 literary genres
 - Metadata JSON files
 - User interaction and review data
+
+## Repo Structure
+
+```
+project/
+  data/
+    raw/
+    interim/
+    processed/
+  notebooks/
+  src/
+  reports/
+  artifacts/
+  README.md
+  requirements.txt or pyproject.toml
+```
