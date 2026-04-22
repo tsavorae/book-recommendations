@@ -1,0 +1,50 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+RAW_DIR = PROJECT_ROOT / "data" / "raw"
+PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
+
+
+@dataclass(frozen=True)
+class CategoryConfig:
+    key: str
+    display_name: str
+    books_file: Path
+    interactions_file: Path
+    processed_dir: Path
+
+
+CATEGORIES: dict[str, CategoryConfig] = {
+    "fantasy_paranormal": CategoryConfig(
+        key="fantasy_paranormal",
+        display_name="Fantasy & Paranormal",
+        books_file=RAW_DIR / "goodreads_books_fantasy_paranormal.json.gz",
+        interactions_file=RAW_DIR / "goodreads_interactions_fantasy_paranormal.json.gz",
+        processed_dir=PROCESSED_DIR / "fantasy_paranormal",
+    ),
+    "history_biography": CategoryConfig(
+        key="history_biography",
+        display_name="History & Biography",
+        books_file=RAW_DIR / "goodreads_books_history_biography.json.gz",
+        interactions_file=RAW_DIR / "goodreads_interactions_history_biography.json.gz",
+        processed_dir=PROCESSED_DIR / "history_biography",
+    ),
+}
+
+
+BOOK_NUMERIC_COLUMNS = [
+    "text_reviews_count",
+    "average_rating",
+    "num_pages",
+    "publication_day",
+    "publication_month",
+    "publication_year",
+    "ratings_count",
+]
+
+GOODREADS_DATE_COLUMNS = ["date_added", "date_updated", "read_at", "started_at"]
+
