@@ -246,6 +246,18 @@ def series_profile(books: pd.DataFrame) -> dict[str, Any]:
     }
 
 
+def combine_books_interactions(books: pd.DataFrame, interactions: pd.DataFrame) -> pd.DataFrame:
+    """
+    Inner join between books and interactions to have a complete dataset for cross-analysis.
+    """
+    return pd.merge(
+        books,
+        interactions,
+        on="book_id",
+        how="inner",
+    )
+
+
 def engagement_profile(books: pd.DataFrame, interactions: pd.DataFrame) -> dict[str, pd.DataFrame]:
     if interactions.empty:
         empty_modes = pd.DataFrame(columns=["mode", "interactions", "pct"])
