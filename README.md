@@ -2,8 +2,6 @@
 
 Course project for Big Data
 
-## Overview
-
 
 ## Dataset
 
