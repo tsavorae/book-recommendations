@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(zcat goodreads_books_fantasy_paranormal.json.gz)",
+      "Bash(python3 -c \"import json; nb = json.load\\(open\\('notebooks/Processing_Curation_Fantasy.ipynb'\\)\\); print\\('Cells:', len\\(nb['cells']\\)\\); print\\('First 3 cell types:', [c.get\\('cell_type'\\) for c in nb['cells'][:3]]\\)\")",
+      "Bash(zcat goodreads_books_history_biography.json.gz)",
+      "Bash(zcat goodreads_interactions_fantasy_paranormal.json.gz)",
+      "Bash(zcat goodreads_interactions_history_biography.json.gz)",
+      "Bash(python3 -m json.tool)",
+      "Bash(zcat goodreads_books.json.gz)",
+      "Bash(python -c \"from src.utils.eda import author_profile, shelves_profile, series_profile, engagement_profile, reading_duration_profile, user_rating_behavior, isbn_quality_profile, platform_growth_profile, build_eda_profile; print\\('All imports OK'\\)\")",
+      "Bash(python3 -c \"from src.utils.eda import author_profile, shelves_profile, series_profile, engagement_profile, reading_duration_profile, user_rating_behavior, isbn_quality_profile, platform_growth_profile, build_eda_profile; print\\('All imports OK'\\)\")",
+      "Bash(python3 -m pytest tests/ -q)",
+      "Bash(python3.12 -m pytest tests/ -q)",
+      "Bash(env/bin/pytest tests/ -q)",
+      "Bash(PYTHONPATH=. env/bin/pytest tests/ -q)",
+      "Bash(PYTHONPATH=. env/bin/pytest tests/ -v)",
+      "Bash(python3)",
+      "Bash(python3 -c \"from pathlib import Path; import sys; PROJECT_ROOT = Path\\('.'\\); sys.path.insert\\(0, str\\(PROJECT_ROOT\\)\\); print\\('Path is:', PROJECT_ROOT\\); print\\('Exists:', PROJECT_ROOT.exists\\(\\)\\)\")"
+    ]
+  }
+}
