@@ -25,14 +25,14 @@ CATEGORIES: dict[str, CategoryConfig] = {
         display_name="Fantasy & Paranormal",
         books_file=RAW_DIR / "goodreads_books_fantasy_paranormal.json.gz",
         interactions_file=RAW_DIR / "goodreads_interactions_fantasy_paranormal.json.gz",
-        processed_dir=PROCESSED_DIR / "fantasy_paranormal",
+        processed_dir=INTERIM_DIR / "fantasy_paranormal",
     ),
     "history_biography": CategoryConfig(
         key="history_biography",
         display_name="History & Biography",
         books_file=RAW_DIR / "goodreads_books_history_biography.json.gz",
         interactions_file=RAW_DIR / "goodreads_interactions_history_biography.json.gz",
-        processed_dir=PROCESSED_DIR / "history_biography",
+        processed_dir=INTERIM_DIR / "history_biography",
     ),
     "mystery_thriller_crime": CategoryConfig(
         key="mystery_thriller_crime",
@@ -46,7 +46,7 @@ CATEGORIES: dict[str, CategoryConfig] = {
         display_name="Romance",
         books_file=RAW_DIR / "goodreads_books_romance.json.gz",
         interactions_file=RAW_DIR / "goodreads_interactions_romance.json.gz",
-        processed_dir=PROCESSED_DIR / "romance",
+        processed_dir=INTERIM_DIR / "romance",
     ),
     "young_adult": CategoryConfig(
         key="young_adult",
