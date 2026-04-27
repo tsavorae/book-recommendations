@@ -12,6 +12,8 @@ Selected subset:
 - Metadata JSON files
 - User interaction and review data
 
+[Cleaned and reduced data by genre](https://drive.google.com/drive/folders/1un4RNi8W0dvh7cRwx_0Ovgmb9Q4nNh7X?usp=drive_link)
+
 ## Repo Structure
 
 ```
