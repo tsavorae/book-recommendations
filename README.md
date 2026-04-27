@@ -14,6 +14,8 @@ Selected subset:
 
 [Cleaned and reduced data by genre](https://drive.google.com/drive/folders/1un4RNi8W0dvh7cRwx_0Ovgmb9Q4nNh7X?usp=drive_link)
 
+[books_master](https://drive.google.com/drive/folders/17vpKc3Q4OvQtRkkvOc4GL8sTpjJB-7bv) -> processed book dataset for feature matrix + PCA. null handling is needed
+
 ## Repo Structure
 
 ```
